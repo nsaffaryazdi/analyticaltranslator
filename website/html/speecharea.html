@@ -1,0 +1,33 @@
+<html>
+<body>
+     
+ <!--Speech synthesis area-->
+     <div class="input-box" id="speech-area">
+    Speech synthesis. <span>Results:</span>
+  
+    <form action="" method="get">
+      <label for="text">Text:</label>
+      <textarea id="text"></textarea>
+      <div class="field-wrapper">
+        <label for="voice">Voice:</label>
+        <select id="voice"></select>
+      </div>
+      <div class="field-wrapper">
+        <label for="rate">Rate (0.1 - 10):</label>
+        <input type="number" id="rate" min="0.1" max="10" value="1" step="any" />
+      </div>
+      <div class="field-wrapper">
+        <label for="pitch">Pitch (0.1 - 2):</label>
+        <input type="number" id="pitch" min="0.1" max="2" value="1" step="any" />
+      </div>
+      <div class="buttons-wrapper">
+        <button id="button-speak-ss" class="button-demo">Speak</button>
+        <button id="button-stop-ss" class="button-demo">Stop</button>
+        <button id="button-pause-ss" class="button-demo">Pause</button>
+        <button id="button-resume-ss" class="button-demo">Resume</button>
+      </div>
+    </form>
+ </div>
+ 
+    </body>
+</html>

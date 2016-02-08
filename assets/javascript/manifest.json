@@ -1,0 +1,14 @@
+{
+  "short_name": "Analytical Translator",
+  "name": "Analytical Translator",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "http://lingoworld.eu/lingoworld/translator/assets/img/analyticalstandard.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "http://lingoworld.eu/lingoworld/translator/androidtranslator.html"
+}

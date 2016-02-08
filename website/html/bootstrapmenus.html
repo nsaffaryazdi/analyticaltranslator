@@ -1,0 +1,173 @@
+<html>
+<body> 
+<head>
+</head>
+<div id="bootstrapmenuHTML">
+
+<a id="left-menu" href="#sidr-left">Links</a><br><br>
+  <button type="button" id="aboutbutton" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#aboutmodalbutton">About</button>
+  <!--<button type="button" id="newsbutton"  class="btn btn-primary btn-lg" data-toggle="modal" data-target="#newsmodalbutton">News</button>-->
+<!--<br><a id="right-menu" href="#sidr-right" style=text-align:right>development menu</a>-->
+  
+  <div id="sidr-left">
+  <!-- Your content -->
+  <ul>
+    <li><a href="https://github.com/xpheres/analyticaltranslator" target="_blank"><img border="0" alt="Source code" src="http://lingoworld.eu/lingoworld/translator/assets/img/githubicon.png" target="_blank"/>  Github repository</a></li>
+    <li class="active"><a href="http://analyticaltranslator.info/donations.html" target="_blank"><img border="0" alt="Donations" src="http://lingoworld.eu/lingoworld/translator/assets/img/donate.png" target="_blank"/> Donations</a></li>
+    <li><a href="http://analyticaltranslator.info" target="_blank"><img border="0" alt="Source code" src="http://lingoworld.eu/lingoworld/translator/assets/img/wiki50.png" target="_blank"/>  Wiki</a></li>
+    <li><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Contact me</button></li>
+    <li><a href="http://analyticaltranslator.info/blog.html" target="_blank">About me</a></li>
+    <!--<li><a href="http://analyticaltranslator.info" target="_blank"><img border="0" alt="Source code" src="http://lingoworld.eu/lingoworld/translator/assets/img/androidicon.png" target="_blank"/>Android App</a></li>-->
+    <!--<li><a href="http://lingoworld.eu/lingoworld/translator/website/php/translatorlatex.php"_blank><img border="0" alt="Source code" src="http://lingoworld.eu/lingoworld/translator/assets/img/latex.jpg" target="_blank"/>Latex</a></li>-->
+    <li><button type="button" id="newsbutton"  class="btn btn-primary btn-lg" data-toggle="modal" data-target="#newsmodalbutton">News</button></li>
+    <!--<li><a href=""></a></li>-->
+</div>
+
+<!--
+<div id="sidr-right">
+  <!-- Your content --> <!--
+  <ul>
+    <li><a href="https://github.com/xpheres/analyticaltranslator/issues" target="_blank">Issues</a></li>
+    <li><a href="http://lingoworld.eu/lingoworld/translator/website/code.html" target="_blank">Sorted code</a></li>
+    <li><a href="http://lingoworld.eu/lingoworld/translator/website/php/syntaxmodels.php" target="_blank">Syntax models</a></li>
+    <li><a href="http://lingoworld.eu/lingoworld/translator/website/php/table.php" target="_blank">Vocabulary</a></li>
+    <!--<li><a href="#">List 5</a></li>-->
+    <!--
+    </ul>
+</div>
+-->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <!-- a row has to be in a container -->
+<div class="container">	
+<!-- Contacts -->
+ <div id="contacts">
+   <div class="row">	
+     <!-- Alignment -->
+	<div class="col-sm-offset-3 col-sm-6">
+	   <!-- Form itself -->
+          <form name="sentMessage" class="well" id="contactForm"  novalidate>
+	       <legend>Contact me</legend>
+		 <div class="control-group">
+                    <div class="controls">
+			<input type="text" class="form-control" 
+			   	   placeholder="Name" id="name" required
+			           data-validation-required-message="Please enter your name" />
+			  <p class="help-block"></p>
+		   </div>
+	         </div> 	
+                <div class="control-group">
+                  <div class="controls">
+			<input type="email" class="form-control" placeholder="Email" 
+			   	            id="email" required
+			   		   data-validation-required-message="Please enter your email" />
+		</div>
+	    </div> 	
+			  
+               <div class="control-group">
+                 <div class="controls">
+		       <textarea rows="10" cols="100" class="form-control" 
+                       placeholder="Message" id="mymessage" required
+		       data-validation-required-message="Please enter your message" minlength="5" 
+                       data-validation-minlength-message="Min 5 characters" 
+                        maxlength="999" style="resize:none" ></textarea>
+                </div>
+               </div> 		 
+	     <div id="success"> </div> <!-- For success/fail messages -->
+	    <button type="submit" class="btn btn-primary pull-right">Send</button>
+	    <button type="button" class="btn btn-primary pull-right" data-dismiss="modal" aria-label="Close">Close</button><br>
+          </form>
+	</div>
+      </div>
+    </div>
+  </div>
+</div> 
+  
+  <!-- Help Modal button -->
+<div class="modal fade" id="aboutmodalbutton" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">About analytical translator</h4>
+      </div>
+      <div class="modal-body">
+        Welcome to this analytical translation tool!<br><br>
+        A pedagogical translator for language learners that analyzes sentences, detects and corrects syntax and grammar and reports and explain mistakes.<br><br>
+        This project aims to resolve many natural language problems and resolve translations with an analytical approach.<br><br>
+        The translator is currently able to detect and report gender,conjugation and declination discrepancies as well as spelling mistakes.<br><br>
+        <h2>Instructions:</h2>
+        Type sentences in german language in the german <b>input box</b> and you will see the translation on the right text box.<br><br>
+        The <b>"messages" text</b> box informs you about grammar and syntax mistakes and helps you to learn cases,grammar and ortographic rules.<br><br>
+        The <b>microphone and speaker icons</b> allows you to input sentences by speaking and to hear the results with speech synthesis.<br><br>
+        The <b> Optical Character Recognition icon</b> allows you to write sentences naturally with your hand<br><br>
+        The <b> Simultaneous translation icon </b> allows you to call someone while being translated in real time.<br><br>
+        By clicking on <b>"Links"</b> you will access a menu with the most important links for this project: Git hub repository, donations, wiki, contact form and forum.<br><br>
+        By clicking on <b>"for developers"</b> link you will see some usefull resources for developers who want to contribute to this project.<br><br>
+        I hope you find this software useful and I'm very happy to receive your questions, support and comments.<br><br>
+        Feel free to share and talk about this software if you like it!<br><br>
+        Thank you!<br><br>
+
+        <table style="border-collapse: separate; border-spacing: 30px 20px;">
+	    <tr>
+		<td><a href="https://github.com/xpheres/analyticaltranslator" target="_blank"><img border="0" alt="Source code" src="http://lingoworld.eu/lingoworld/translator/assets/img/githubicon.png" target="_blank"/></a></td>
+		<td><a href="https://www.gnu.org/licenses/gpl.html" target="_blank"><img border="0" alt="Source code" src="http://lingoworld.eu/lingoworld/translator/assets/img/gplv3.png" target="_blank"/></a></td>
+		<td></td>
+	    </tr>
+	    <tr>
+		<td><font size="1">Github repository</font></td>
+		<td><font size="1">General Public Licence Version 3</font></td>
+		<td></td>  
+	    </tr>
+	</table>
+    
+     </div>
+    </div>
+   </div>
+  </div>
+     <!-- News Modal button -->
+<div class="modal fade" id="newsmodalbutton" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">News</h4>
+      </div>
+      <div class="modal-body">
+      06.07.2015 - New Ubuntu touch analytical translator client has been released! <a href="https://uappexplorer.com/app/analyticaltranslator.xpheresdev">Check it here!</a>. 
+      <br>
+        27.05.2015 - Source code has been imported to 
+        <a href="http://gitlab.com/u/xpheres"> GitLab</a> and 
+        <a href="https://bitbucket.org/xpheres"> BitBucket</a> in order to bring more exposure to the project, feel free to fork it and collaborate.
+        <br><br>
+        26.05.2015 - Front-end app for android has been submited to <a href="https://f-droid.org/repository/browse/?fdfilter=analytical&fdid=com.example.root.analyticaltranslator"> F-droid</a> store and submission has been accepted. The app can be download now from F-droid store!.
+        
+
+        <table style="border-collapse: separate; border-spacing: 30px 20px;">
+	    <tr>
+		<td><a href="https://github.com/xpheres/analyticaltranslator" target="_blank"><img border="0" alt="Source code" src="http://lingoworld.eu/lingoworld/translator/assets/img/githubicon.png" target="_blank"/></a></td>
+		<td><a href="https://www.gnu.org/licenses/gpl.html" target="_blank"><img border="0" alt="Source code" src="http://lingoworld.eu/lingoworld/translator/assets/img/gplv3.png" target="_blank"/></a></td>
+		<td><a href="https://wdrl.info/" target="_blank"><img border="0" height="50" width="50" alt="Source code" src="https://img-anselmhannemann.netdna-ssl.com/img/work/wdrl-logo.svg" target="_blank"/></a></td>
+		<td></td>
+	    </tr>
+	    <tr>
+		<td><font size="1">Github repository</font></td>
+		<td><font size="1">General Public Licence Version 3</font></td>
+		<td><font size="1">Featured in Web Development Reading List Issue 69</font></td>
+		<td></td>  
+	    </tr>
+	</table>
+    
+     </div>
+    </div>
+   </div>
+  
+     
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body></html>

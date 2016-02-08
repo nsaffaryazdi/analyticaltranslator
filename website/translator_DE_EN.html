@@ -1,0 +1,235 @@
+<html>
+
+<!--
+Analytical translator.
+
+Written by "xpheres" 2014, xpheres@lingoworld.eu
+
+More information on http://www.lingoworld.eu
+Repository: https://github.com/xpheres/analyticaltranslator
+
+License:
+
+This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see http://www.gnu.org/licenses.
+    
+    This program comes with ABSOLUTELY NO WARRANTY.
+
+This General Public License does not permit incorporating your program
+    into proprietary programs. If your program is a subroutine library, you
+    may consider it more useful to permit linking proprietary applications
+    with the library. If this is what you want to do, use the GNU Library
+    General Public License instead of this License.
+
+By accepting this licence you agree to give:
+
+    the freedom to use the software for any purpose,
+    the freedom to change the software to suit your needs,
+    the freedom to share the software with your friends and neighbors, and
+    the freedom to share the changes you make.
+
+Please read the file "termsandconditions" for more details and make sure you
+attach the GNU General Public License, version 3 (GPL-3.0) terms and conditions
+to any copy or modification of this software along with this information.
+    
+-->
+
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	
+<title>Analytical translator</title>
+
+<link href="http://lingoworld.eu/lingoworld/translator/assets/css/style.css" rel="stylesheet" type="text/css" /> 	<!--This is the main CSS style file-->
+<link rel="stylesheet" href="http://lingoworld.eu/lingoworld/translator/assets/jquery/sidr/stylesheets/jquery.sidr.dark.css"> <!--SIDR JQUERY RESPONSIVE MENU STYLE-->
+<link href="http://lingoworld.eu/lingoworld/translator/assets/jquery/bootstrap/css/bootstrap.min.css" rel="stylesheet"> <!-- Bootstrap CSS style file -->  
+  
+    <script src="http://lingoworld.eu/lingoworld/translator/assets/jquery/jquery.js"></script> <!-- Include jQuery -->
+    
+    <script src="http://lingoworld.eu/lingoworld/translator/assets/jquery/jquery.sidr.min.js"></script> <!-- Include the Sidr JS -->
+
+    <script src="http://lingoworld.eu/lingoworld/translator/assets/jquery/jquery.touchwipe.js"></script> <!-- I include an external library to handle touch events -->
+    
+    <script src="http://lingoworld.eu/lingoworld/translator/assets/jquery/bootstrap/js/bootstrap.min.js"></script> <!-- Included bootstrap for -->
+    
+    <script src="http://lingoworld.eu/lingoworld/translator/assets/jquery/bootstrap/validation/jqBootstrapValidation.js"></script> <!-- Validation for the email -->
+    
+    <script src="http://lingoworld.eu/lingoworld/translator/assets/jquery/contact_me.js"></script> <!--Send the email  -->
+    
+    <script src="http://lingoworld.eu/lingoworld/translator/assets/javascript/atranslatorDE_EN.js"></script> <!-- Collection of main functions for the translator frontend -->
+
+    
+</head>
+
+	
+<body>
+
+<h1>Analytical translator</h1>		<!--Here starts the HTML body-->
+
+<buttonlist>					<!--This is the microphone button for voice recognition-->
+ <button1><a href="website/translatorvoice.html"><img border="0" alt="dictate" src="http://lingoworld.eu/lingoworld/translator/assets/img/microphone.png" /></a></button1>
+ <button1><a href="website/translatorspeech.html"><img border="0" alt="dictate" src="http://lingoworld.eu/lingoworld/translator/assets/img/speaker.png" /></a></button1>
+ <button1><a href="website/translatorocr.html"><img border="0" alt="dictate" src="http://lingoworld.eu/lingoworld/translator/assets/img/ocr.png" /></a></button1>
+ <button1><a href="website/translatorcall.html"><img border="0" alt="dictate" src="http://lingoworld.eu/lingoworld/translator/assets/img/call.png" /></a></button1>
+ <!--<button1><a href="translator_es_de.html"><img border="0" alt="switch" src="http://lingoworld.eu/lingoworld/banners/switch.png" /></a></button1>-->
+ <button1>
+ <select name="forma" onchange="location = this.options[this.selectedIndex].value;">
+ <option value="http://lingoworld.eu/lingoworld/translator/translator.html">Deutsch -> Espanol</option>
+ <option selected value="http://lingoworld.eu/lingoworld/translator/website/translator_DE_EN.html">Deutsch -> English</option>
+ </select>
+ </button1>
+ </buttonlist>
+
+<br><br>
+
+  <div class="input-box">		<!--This is the div for the Source language input box-->
+  German<br>
+    <textarea id="German" cols="50" rows="5" onblur="Translate(this.value)" onkeyup="Translate(this.value)"></textarea>
+  </div>
+  <div class="input-box">		<!--This is the div for the target language-->
+  Spanish<br>
+    <textarea id="spanish" cols="50" rows="5"></textarea>
+  </div>
+  <br><br>
+  
+  <br><br><br><br><br><br><br>
+  
+  <div class="message">			<!--This is the div for the message text box-->
+  Messages<br>
+    <textarea id="message" cols="100" rows="5"></textarea>
+  </div>
+
+  
+<br><br><br><br><br><br><br><br>
+  <a id="left-menu" href="#sidr-left">Links</a><br><br>
+  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#aboutmodalbutton">About</button>
+<p style=text-align:center><input type="image" id="quotes" src="http://lingoworld.eu/lingoworld/translator/assets/img/transicon.jpg" class="btn btn-default" data-html="true" data-container="body" data-toggle="popover" delay:{"show":500,"hide":50} data-placement="right" data-content="Hi! I'm here to help you! Click on me and I'll give you some useful tips! :)"></form></p>
+<!--<p style=text-align:center><object id="quotes" type="image/svg+xml" data="http://lingoworld.eu/lingoworld/translator/assets/img/transicon.svg" class="btn btn-default" data-html="true" data-container="body" data-toggle="popover" delay:{"show":500,"hide":50} data-placement="right" data-content="Hi! I'm here to help you! Click on me and I'll give you some useful tips! :)"></p>-->
+<p style=text-align:right><a id="right-menu" href="#sidr-right" align="right">for developers</a></p><br><br>
+  
+  
+  <div id="sidr-left">
+  <!-- Your content -->
+  <ul>
+    <li><a href="https://github.com/xpheres/analyticaltranslator" target="_blank"><img border="0" alt="Source code" src="http://lingoworld.eu/lingoworld/translator/assets/img/githubicon.png" target="_blank"/>  Github repository</a></li>
+    <li class="active"><a href="http://lingoworld.eu/lingoworld/donations/donate.php" target="_blank"><img border="0" alt="Donations" src="http://lingoworld.eu/lingoworld/translator/assets/img/donate.png" target="_blank"/> Donations</a></li>
+    <li><a href="https://github.com/xpheres/analyticaltranslator/wiki" target="_blank"><img border="0" alt="Source code" src="http://lingoworld.eu/lingoworld/translator/assets/img/wiki50.png" target="_blank"/>  Wiki</a></li>
+    <li><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Contact me</button></li>
+    <li><a href="http://lingoworld.eu/lingoworld/resume/resume.html" target="_blank">About me</a></li>
+</div>
+   
+<div id="sidr-right">
+  <!-- Your content -->
+  <ul>
+    <li><a href="https://github.com/xpheres/analyticaltranslator/issues" target="_blank">Issues</a></li>
+    <li><a href="http://lingoworld.eu/lingoworld/translator/website/code.html" target="_blank">Sorted code</a></li>
+    <li><a href="http://lingoworld.eu/lingoworld/translator/website/php/syntaxmodels.php" target="_blank">Syntax models</a></li>
+    <li><a href="http://lingoworld.eu/lingoworld/translator/website/php/table.php" target="_blank">Vocabulary</a></li>
+    <li><a href="http://lingoworld.eu/lingoworld/translator/website/txt/developers_guide.txt" target="_blank">Developers guide</a></li>
+    <!--<li><a href="#">List 5</a></li>-->
+    
+    </ul>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <!-- a row has to be in a container -->
+<div class="container">	
+<!-- Contacts -->
+ <div id="contacts">
+   <div class="row">	
+     <!-- Alignment -->
+	<div class="col-sm-offset-3 col-sm-6">
+	   <!-- Form itself -->
+          <form name="sentMessage" class="well" id="contactForm"  novalidate>
+	       <legend>Contact me</legend>
+		 <div class="control-group">
+                    <div class="controls">
+			<input type="text" class="form-control" 
+			   	   placeholder="Name" id="name" required
+			           data-validation-required-message="Please enter your name" />
+			  <p class="help-block"></p>
+		   </div>
+	         </div> 	
+                <div class="control-group">
+                  <div class="controls">
+			<input type="email" class="form-control" placeholder="Email" 
+			   	            id="email" required
+			   		   data-validation-required-message="Please enter your email" />
+		</div>
+	    </div> 	
+			  
+               <div class="control-group">
+                 <div class="controls">
+		       <textarea rows="10" cols="100" class="form-control" 
+                       placeholder="Message" id="mymessage" required
+		       data-validation-required-message="Please enter your message" minlength="5" 
+                       data-validation-minlength-message="Min 5 characters" 
+                        maxlength="999" style="resize:none" ></textarea>
+                </div>
+               </div> 		 
+	     <div id="success"> </div> <!-- For success/fail messages -->
+	    <button type="submit" class="btn btn-primary pull-right">Send</button><br />
+          </form>
+	</div>
+      </div>
+    </div>
+  </div>
+</div> 
+  
+  <!-- Help Modal button -->
+<div class="modal fade" id="aboutmodalbutton" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">About analytical translator</h4>
+      </div>
+      <div class="modal-body">
+        Welcome to this analytical translation tool!<br><br>
+        This project aims to resolve many natural language problems and resolve translations with an analytical approach.<br><br>
+        Type sentences in german language in the german <b>input box</b> and you will see the translation on the right text box.<br><br>
+        The <b>"messages" text</b> box informs you about grammar and syntax mistakes and helps you to learn cases,grammar and ortographic rules.<br><br>
+        The <b>microphone and speaker icons</b> allows you to input sentences by speaking and to hear the results with speech synthesis.<br><br>
+        The <b> Optical Character Recognition icon</b> allows you to write sentences naturally with your hand<br><br>
+        The <b> Simultaneous translation icon </b> allows you to call someone while being translated in real time.<br><br>
+        By clicking on <b>"Links"</b> you will access a menu with the most important links for this project: Git hub repository, donations, wiki, contact form and forum.<br><br>
+        By clicking on <b>"for developers"</b> link you will see some usefull resources for developers who want to contribute to this project.<br><br>
+        I hope you find this software useful and I'm very happy to receive your questions, support and comments.<br><br>
+        Feel free to share and talk about this software if you like it!<br><br>
+        Thank you!<br><br>
+
+        <table style="border-collapse: separate; border-spacing: 30px 20px;">
+	    <tr>
+		<td><a href="https://github.com/xpheres/analyticaltranslator" target="_blank"><img border="0" alt="Source code" src="http://lingoworld.eu/lingoworld/translator/assets/img/githubicon.png" target="_blank"/></a></td>
+		<td><a href="https://www.gnu.org/licenses/gpl.html" target="_blank"><img border="0" alt="Source code" src="http://lingoworld.eu/lingoworld/translator/assets/img/gplv3.png" target="_blank"/></a></td>
+		<td><a href="https://wdrl.info/" target="_blank"><img border="0" height="50" width="50" alt="Source code" src="https://img-anselmhannemann.netdna-ssl.com/img/work/wdrl-logo.svg" target="_blank"/></a></td>
+		<td></td>
+	    </tr>
+	    <tr>
+		<td><font size="1">Github repository</font></td>
+		<td><font size="1">General Public Licence Version 3</font></td>
+		<td><font size="1">Featured in Web Development Reading List Issue 69</font></td>
+		<td></td>  
+	    </tr>
+	</table>
+    
+     </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body></html>

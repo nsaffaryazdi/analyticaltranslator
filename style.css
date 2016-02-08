@@ -1,0 +1,90 @@
+ 	.input-box {
+	float:left;
+	margin:0 0 0 50px;
+	border: 2px solid #a1a1a1;
+	padding: 5px 35px; 
+	background: #dddddd;
+	width: 500px;
+	border-radius: 25px;
+	}
+
+	a href {
+	align:left;
+	}
+	
+	    .message {
+	float:left;
+	margin:0 0 0 50px;
+	border: 2px solid #a1a1a1;
+	padding: 5px 35px; 
+	background: #F2E7E7;
+	width: 900px;
+	border-radius: 10px;
+	}
+
+	a href {
+	align:left;
+	}
+	
+	error {
+	    color: red;
+	    background-color: white;
+	}
+
+buttonlist {
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+button1:hover {
+    background-color: yellow;
+    }
+
+button1 {
+  
+  background-color: #eee;
+  border: 2px solid #eee;
+  height: 28px;
+  width: 115px;
+  margin: 50px 0 0 50px;
+  padding: 15 7 0 7px;
+  overflow: hidden;
+  display: inline;
+}
+	
+buttontwo:hover {
+    background-color: grey;
+  }
+    
+    buttontwo {
+  
+  background-color: #eee;
+  border: 2px solid #eee;
+  height: 128px;
+  width: 115px;
+  margin: 50px 0 0 50px;
+  padding: 40 7 0 7px;
+  overflow: hidden;
+  display: inline;
+}
+
+buttonthree:hover {
+    background-color: orange;
+    color:white;
+  }
+    
+    buttonthree {
+  
+  color:orange;
+  background-color: white;
+  border: 2px solid #eee;
+  height: 128px;
+  width: 115px;
+  margin: 50px 0 0 50px;
+  padding: 0 7 0 7px;
+  overflow: hidden;
+  display: inline;
+}

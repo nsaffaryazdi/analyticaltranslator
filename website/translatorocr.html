@@ -1,0 +1,157 @@
+<html>
+
+<!--
+  			 GOCR (JOCR at SF.net)
+
+GOCR is an optical character recognition program, released under the
+GNU General Public License. It reads images in many formats  and outputs
+a text file. Possible image formats are pnm, pbm, pgm, ppm, some pcx and
+tga image files. Other formats like pnm.gz, pnm.bz2, png, jpg, tiff, gif,
+bmp will be automatically converted using the netpbm-progs, gzip and bzip2
+via unix pipe.
+A simple graphical frontend written in tcl/tk and some
+sample files are included.
+Gocr is also able to recognize and translate barcodes.
+You do not have to train the program or store large font bases.
+
+more info: http://jocr.sourceforge.net/
+
+Authors (in chronological order):
+
+Joerg Schulenburg  <jNOschulen{at}gmx.SPAM.de> (remove NO+SPAM for valid EMAIL address)
+	* Original idea and creation, programmer leader
+
+Bruno Barberi Gnecco <brunobg{at}users.sourceforge.net>
+	* Programmer
+
+
+_________________________________________________________________________________________
+
+Analytical translator.
+
+Written by "xpheres" 2014, xpheres@lingoworld.eu
+
+More information on http://www.lingoworld.eu
+Repository: https://github.com/xpheres/analyticaltranslator
+
+License:
+
+This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see http://www.gnu.org/licenses.
+    
+    This program comes with ABSOLUTELY NO WARRANTY.
+
+This General Public License does not permit incorporating your program
+    into proprietary programs. If your program is a subroutine library, you
+    may consider it more useful to permit linking proprietary applications
+    with the library. If this is what you want to do, use the GNU Library
+    General Public License instead of this License.
+
+By accepting this licence you agree to give:
+
+    the freedom to use the software for any purpose,
+    the freedom to change the software to suit your needs,
+    the freedom to share the software with your friends and neighbors, and
+    the freedom to share the changes you make.
+
+Please read the file "termsandconditions" for more details and make sure you
+attach the GNU General Public License, version 3 (GPL-3.0) terms and conditions
+to any copy or modification of this software along with this information.
+    
+
+-->
+
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	
+<title>Analytical translator</title>
+
+<link rel="stylesheet" type="text/css" href="http://lingoworld.eu/lingoworld/translator/assets/css/ocr.css">
+<link href="http://lingoworld.eu/lingoworld/translator/assets/css/style.css" rel="stylesheet" type="text/css" /> 	<!--This is the main CSS style file-->
+<link rel="stylesheet" href="http://lingoworld.eu/lingoworld/translator/assets/jquery/sidr/stylesheets/jquery.sidr.dark.css"> <!--SIDR JQUERY RESPONSIVE MENU STYLE-->
+<link href="http://lingoworld.eu/lingoworld/translator/assets/jquery/bootstrap/css/bootstrap.min.css" rel="stylesheet"> <!-- Bootstrap CSS style file -->  
+  
+    <script src="http://lingoworld.eu/lingoworld/translator/assets/jquery/jquery.js"></script> <!-- Include jQuery -->
+    
+    <script src="http://lingoworld.eu/lingoworld/translator/assets/jquery/jquery.sidr.min.js"></script> <!-- Include the Sidr JS -->
+
+    <script src="http://lingoworld.eu/lingoworld/translator/assets/jquery/jquery.touchwipe.js"></script> <!-- I include an external library to handle touch events -->
+    
+    <script src="http://lingoworld.eu/lingoworld/translator/assets/jquery/jquery.typetype.min.js"></script> <!-- I include an external library to handle touch events -->
+    
+    <script src="http://lingoworld.eu/lingoworld/translator/assets/jquery/bootstrap/js/bootstrap.min.js"></script> <!-- Included bootstrap for -->
+    
+    <script src="http://lingoworld.eu/lingoworld/translator/assets/jquery/bootstrap/validation/jqBootstrapValidation.js"></script> <!-- Validation for the email -->
+    
+    <script src="http://lingoworld.eu/lingoworld/translator/assets/jquery/contact_me.js"></script> <!--Send the email  -->
+    
+    <script src="http://lingoworld.eu/lingoworld/translator/assets/javascript/atranslator.js"></script> <!-- Collection of main functions for the translator frontend -->
+
+    <!-- HTML content-->
+    
+    <!-- Bootstrap menus -->
+    <link rel="import" id="bootstrapmenus" href="http://lingoworld.eu/lingoworld/translator/website/html/bootstrapmenus.html">
+    <link rel="import" href="file.html" onload="handleLoad(event)" onerror="handleError(event)">
+    
+        <!-- Text areas -->
+    <link rel="import" id="textareas" href="http://lingoworld.eu/lingoworld/translator/website/html/textareas.html">
+    <link rel="import" href="file.html" onload="handleLoad(event)" onerror="handleError(event)">
+    
+            <!-- OCR area -->
+    <link rel="import" id="ocrarea" href="http://lingoworld.eu/lingoworld/translator/website/html/ocrarea.html">
+    <link rel="import" href="file.html" onload="handleLoad(event)" onerror="handleError(event)">
+    
+    <!-- Quotes -->
+    <link rel="import" id="quotes" href="http://lingoworld.eu/lingoworld/translator/website/html/quotes.html">
+    <link rel="import" href="file.html" onload="handleLoad(event)" onerror="handleError(event)">
+    
+</head>
+
+<body>
+
+<h1>Analytical translator </h1>		<!--Here starts the HTML body-->
+
+<br>
+
+<script>
+
+var getImport = document.querySelector('#textareas');			//We import the text areas
+var getContent = getImport.import.querySelector('#textareasHTML');	//#textareasHTML
+document.body.appendChild(document.importNode(getContent, true));
+
+var getImport = document.querySelector('#ocrarea');			//We import the text OCR area
+var getContent = getImport.import.querySelector('#main');		//#main (ocrarea)
+document.body.appendChild(document.importNode(getContent, true));
+
+var getContent = getImport.import.querySelector('#demo');		//#main (ocrarea)
+document.body.appendChild(document.importNode(getContent, true));	
+
+//We import the bootstrap menus
+var getImport = document.querySelector('#bootstrapmenus');		// We import the bootstrap menus
+var getContent = getImport.import.querySelector('#bootstrapmenuHTML');	// #bootstrapmenuHTML
+document.body.appendChild(document.importNode(getContent, true));
+
+//We import the quotes and sign
+
+var getImport = document.querySelector('#quotes');			// We import the quotes
+var getContent = getImport.import.querySelector('#quotesHTML');		// #quotesHTML
+document.body.appendChild(document.importNode(getContent, true));	
+
+</script>
+		<script src="http://lingoworld.eu/lingoworld/translator/assets/jquery/gocr.js"></script>
+		<script src="http://lingoworld.eu/lingoworld/translator/assets/javascript/atransocr.js"></script> <!-- OCR frontend functions -->
+		<script src="http://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script> 
+		
+</body></html>

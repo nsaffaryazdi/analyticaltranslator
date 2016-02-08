@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Xpheres analytical translator</title>
+    
+<link href="http://lingoworld.eu/lingoworld/translator/assets/css/style.css" rel="stylesheet" type="text/css" /> 	<!--This is the main CSS style file-->
+<link rel="stylesheet" href="http://lingoworld.eu/lingoworld/translator/assets/jquery/sidr/stylesheets/jquery.sidr.dark.css"> <!--SIDR JQUERY RESPONSIVE MENU STYLE-->
+<link href="http://lingoworld.eu/lingoworld/translator/assets/jquery/bootstrap/css/bootstrap.min.css" rel="stylesheet"> <!-- Bootstrap CSS style file -->  
+  
+    <script src="http://lingoworld.eu/lingoworld/translator/assets/jquery/jquery.js"></script> <!-- Include jQuery -->
+    
+    <script src="http://lingoworld.eu/lingoworld/translator/assets/jquery/jquery.sidr.min.js"></script> <!-- Include the Sidr JS -->
+
+    <script src="http://lingoworld.eu/lingoworld/translator/assets/jquery/jquery.touchwipe.js"></script> <!-- I include an external library to handle touch events -->
+    
+    <script src="http://lingoworld.eu/lingoworld/translator/assets/jquery/jquery.typetype.min.js"></script> <!-- I include an external library to handle touch events -->
+    
+    <script src="http://lingoworld.eu/lingoworld/translator/assets/jquery/bootstrap/js/bootstrap.min.js"></script> <!-- Included bootstrap for -->
+    
+    <script src="http://lingoworld.eu/lingoworld/translator/assets/jquery/bootstrap/validation/jqBootstrapValidation.js"></script> <!-- Validation for the email -->
+    
+    <script src="http://lingoworld.eu/lingoworld/translator/assets/jquery/contact_me.js"></script> <!--Send the email  -->
+    
+    <script src="http://lingoworld.eu/lingoworld/translator/assets/javascript/atranslator.js"></script> <!-- Collection of main functions for the translator frontend -->
+    
+          <!-- HTML content-->
+    
+    <!-- Bootstrap menus -->
+    <link rel="import" id="bootstrapmenus" href="http://lingoworld.eu/lingoworld/translator/website/html/bootstrapmenus.html">
+    <link rel="import" href="file.html" onload="handleLoad(event)" onerror="handleError(event)">
+    
+    <!-- Text areas -->
+    <link rel="import" id="textareas" href="http://lingoworld.eu/lingoworld/translator/website/html/textareas.html">
+    <link rel="import" href="file.html" onload="handleLoad(event)" onerror="handleError(event)">
+    
+    <!-- Voice recognition area -->
+    <link rel="import" id="voicearea" href="http://lingoworld.eu/lingoworld/translator/website/html/voicearea.html">
+    <link rel="import" href="file.html" onload="handleLoad(event)" onerror="handleError(event)">
+    
+    <!-- Speech synthesis area -->
+    <link rel="import" id="speecharea" href="http://lingoworld.eu/lingoworld/translator/website/html/speecharea.html">
+    <link rel="import" href="file.html" onload="handleLoad(event)" onerror="handleError(event)">
+    
+    <!-- Quotes -->
+    <link rel="import" id="quotes" href="http://lingoworld.eu/lingoworld/translator/website/html/quotes.html">
+    <link rel="import" href="file.html" onload="handleLoad(event)" onerror="handleError(event)">
+    
+  </head>
+  <body>
+    <h1>Analytical translator</h1>
+    
+<br>
+    
+<script>
+
+var getImport = document.querySelector('#textareas');			//We import the text areas
+var getContent = getImport.import.querySelector('#textareasHTML');	//#textareasHTML
+document.body.appendChild(document.importNode(getContent, true));	
+
+</script>
+<br><br><br><br><br><br><br><br>
+
+<script>
+var getImport = document.querySelector('#voicearea');			// We import the voice area
+var getContent = getImport.import.querySelector('#voice-area');		// #voicearea
+document.body.appendChild(document.importNode(getContent, true));	
+var getImport = document.querySelector('#speecharea');			// We import the speech area
+var getContent = getImport.import.querySelector('#speech-area');	// #speech-area
+document.body.appendChild(document.importNode(getContent, true));	
+</script>
+
+<span id="ws-unsupported" class="hidden">API not supported</span>
+  
+<br><br><br><br><br><br><br><br><br><br><br><br>
+ 
+<script>
+
+//We import the bootstrap menus
+var getImport = document.querySelector('#bootstrapmenus');		// We import the bootstrap menus
+var getContent = getImport.import.querySelector('#bootstrapmenuHTML');	// #bootstrapmenuHTML
+document.body.appendChild(document.importNode(getContent, true));	
+
+</script>
+<br><br><br>
+<script>
+
+//We import the quotes and sign
+var getImport = document.querySelector('#quotes');			// We import the quotes
+var getContent = getImport.import.querySelector('#quotesHTML');		// #quotesHTML
+document.body.appendChild(document.importNode(getContent, true));	
+
+</script>
+ 
+ <script src="http://lingoworld.eu/lingoworld/translator/assets/javascript/atransvoice.js"></script> <!-- Collection of voice functions for the translator frontend -->
+ 
+ <script src="http://lingoworld.eu/lingoworld/translator/assets/javascript/atransspeech.js"></script> <!-- Collection of speech functions for the translator frontend -->
+ 
+  </body>
+</html>
