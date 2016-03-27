@@ -4,7 +4,7 @@
 
 <a href="http://lingoworld.eu/translator/translator.php">Test the translator here (Pure PHP)</a>
 
-<a href="htto://lingoworld.eu/translator/translator.html">Test the javascript frontend here</a>
+<a href="http://lingoworld.eu/translator/translator.html">Test the javascript frontend here</a>
 
 
 "Analytical Translator" is a translator project that comprises a collection of open source natural language functions
