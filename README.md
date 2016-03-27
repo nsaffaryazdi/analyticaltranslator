@@ -2,9 +2,9 @@
 
 <img src="http://lingoworld.eu/at/public/images/webscreenshot1.png" />
 
-<a href="http://lingoworld.eu/lingoworld/translator/translator.php">Test the translator here (Pure PHP)</a>
+<a href="http://lingoworld.eu/translator/translator.php">Test the translator here (Pure PHP)</a>
 
-<a href="http://analyticaltranslator.info/translator.html">Test the javascript frontend here</a>
+<a href="htto://lingoworld.eu/translator/translator.html">Test the javascript frontend here</a>
 
 
 "Analytical Translator" is a translator project that comprises a collection of open source natural language functions
@@ -25,12 +25,12 @@ Now I want to bring you the possibility to make a donation that may provide me w
 You can support me and this open source project and show your gratitude using the donation links below:
 
 Make a donation by paypal:
-<a href="http://lingoworld.eu/lingoworld/donations/donate.php"><img src="http://lingoworld.eu/lingoworld/donations/paypalbutton.png"></a>
+<a href="http://lingoworld.eu/websites/donations/donate.php"><img src="http://lingoworld.eu/lingoworld/donations/paypalbutton.png"></a>
 
 Make a donation by gratipay:
-<a href="https://gratipay.com/xpheres"><img src="http://lingoworld.eu/lingoworld/donations/gratipay.png"></a>
+<a href="https://gratipay.com/xpheres"><img src="http://lingoworld.eu/websites/donations/gratipay.png"></a>
 
 Make a donation with bitcoins:
- <a href="http://lingoworld.eu/lingoworld/donations/bitaddressqr.png">
- <img src="http://lingoworld.eu/lingoworld/donations/bitaddressqr78.png">
+ <a href="http://lingoworld.eu/websites/donations/bitaddressqr.png">
+ <img src="http://lingoworld.eu/websites/donations/bitaddressqr78.png">
   15WVb3LZWCsdZGjkNFBuELwt3U4zpnSgwa</a>
